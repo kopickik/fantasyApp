@@ -1,0 +1,4 @@
+<select data-ng-model="strictsearch.pos">
+  <option value="">All Positions</option>
+  <option value="{{ $index.toString() }}" data-ng-repeat="position in positions">{{ position.abbr }}</option>
+</select>

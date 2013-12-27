@@ -1,0 +1,6 @@
+<div data-ng-controller="PlayersController" data-ng-init="findOnePlayer()">
+  <h2><span data-ng-show="player.num">#{{ player.num }}</span> {{player.name}}</h2>
+  <p><strong>Team: </strong>{{ nflteams[player.team].team }} </p>
+  <p><strong>Position: </strong>{{ positions[player.pos].pos }}</p>
+  <p><a href="#/players">View all players</a></p>
+</div>
