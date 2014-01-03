@@ -9,13 +9,13 @@ angular.module('fantasyApp.controllers.leagues', ['fantasyApp.services.leagues']
 
       $scope.findLeagues = function() {
         $scope.leagues = Leagues.collection();
-      }
+      };
 
       $scope.findOneLeague = function(leagueId) {
         if(!!$scope.leagueId) {
-          angularFire(Leagues.find($routeParams.leagueId), $scope, 'league')
+          angularFire(Leagues.find($routeParams.leagueId), $scope, 'league');
         }
-      }
+      };
 
       $scope.createLeague = function() {
         var leagueId = Leagues.create($scope.league, $scope.auth, function(err) {
@@ -25,9 +25,9 @@ angular.module('fantasyApp.controllers.leagues', ['fantasyApp.services.leagues']
             $scope.$apply();
           }
         });
-      }
+      };
 
       $scope.removeLeague = function(leagueId) {
         Leagues.removeLeague(leagueId);
-      }
+      };
     }]);
