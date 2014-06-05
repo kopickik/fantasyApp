@@ -1,0 +1,30 @@
+<div class="row" data-ng-controller="NFLController">
+  <h1>Standings</h1>
+  <div class="large-6 afc">
+   
+    <div class="bd"><h4>AFC</h4><h5>East</h5></div>
+    <table class="table">
+      <thead>
+        <th>Team</th>
+        <th>W</th>
+        <th>L</th>
+        <th>T</th>
+      </thead>
+      <tr data-ng-repeat="nflteam in nflteams | filter:conference:AFC">
+        <td>{{ nflteam.team }}</td>
+        <td>{{ nflteam.wins }}</td>
+        <td>{{ nflteam.losses }}</td>
+        <td>{{ nflteam.ties }}</td>
+      </tr>
+    </table>
+    <div class="bd"><h5>North</h5></div>
+    <div class="bd"><h5>South</h5></div>
+    <div class="bd"><h5>West</h5></div>
+  </div>
+  <div class="large-6 nfc">
+    <div class="bd"><h4>NFC</h4><h5>East</h5></div>
+    <div class="bd"><h5>North</h5></div>
+    <div class="bd"><h5>South</h5></div>
+    <div class="bd"><h5>West</h5></div>
+  </div>
+</div>
