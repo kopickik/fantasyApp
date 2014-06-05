@@ -11,6 +11,7 @@ app.config(['$routeProvider',
       .when('/signup',  { templateUrl: 'views/users/signup.html' })
       .when('/nflteams',{ templateUrl: 'views/nfl/list.html', authRequired: true})
       .when('/nflteams/:nflTeamId', { templateUrl: 'views/nfl/view.html', authRequired: true})
+      .when('/standings', { templateUrl: 'views/nfl/standings.html', authRequired: true})
       .when('/leagues', { templateUrl: 'views/leagues/list.html', authRequired: true})
       .when('/leagues/create', { templateUrl: 'views/leagues/edit.html', authRequired: true})
       .when('/leagues/:leagueId', { templateUrl: 'views/leagues/view.html', authRequired: true})
@@ -29,6 +30,6 @@ app.config(['$routeProvider',
 
   // your Firebase URL goes here
   // should look something like: https://blahblahblah.firebaseio.com
-  .constant('FBURL', 'https://spoonfedweb.firebaseio.com')
+  .constant('FBURL', 'https://spoonfedweb.firebaseio.com');
 
 

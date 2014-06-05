@@ -1,4 +1,4 @@
-<nav class="top-bar ng-scope" data-topbar ng-controller="HeaderController">
+<nav class="top-bar ng-scope" data-topbar data-ng-controller="HeaderController">
   <ul class="title-area">
     <li class="name">
       <h1><a href="#/">ngFantasyFootball</a></h1>
@@ -10,16 +10,16 @@
         <a href="#{{entry.link}}">{{entry.title}}</a>
       </li>
     </ul>
-    <ul class="right" ng-hide="auth">
-      <li><a href="#/signup">Signup</a></li>
-      <li class="divider"></li>
-      <li><a href="#/signin">Signin</a></li>
+    <ul class="right" data-ng-hide="auth">
+      <li data-ng-repeat="entry in navbarEntries" data-ng-class="{ active: entry.isActive }">
+        <a href="#{{entry.link}}">{{entry.title}}</a>
+      </li>
     </ul>
-    <ul class="right ng-hide" ng-show="auth">
+    <ul class="right ng-hide" data-ng-show="auth">
       <li class="has-dropdown">
-        <a href="#">{{user.name}} <b class="caret"></b></a>
+        <a href="">{{user.name}} <b class="caret"></b></a>
         <ul class="dropdown">
-          <li><a href="" ng-click="logout()">Signout</a></li>
+          <li><a href="#" data-ng-click="logout()">Signout</a></li>
         </ul>
       </li>
     </ul>

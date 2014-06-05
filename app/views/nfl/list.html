@@ -1,5 +1,6 @@
 <div class="row">
 <div class="small-6 columns" data-ng-controller="NFLController">
+  <a href="#/standings" class="btn">Standings</a>
   <h3>NFL Teams</h3>
   <div data-ng-repeat="nflteam in nflteams">
     <a href="#/nflteams/{{ $index }}">{{ nflteam.team }}  {{nflteam.mascot }}</a>

@@ -5,5 +5,10 @@ angular.module('fantasyApp.controllers.nfl', ['fantasyApp.services.nfl'])
     function($scope, $routeParams, NFL) {
       $scope.nflteams = NFL.teams;
       $scope.nflteam = NFL.teams[$routeParams['nflTeamId']];
+
+      var conferenceFilter = $scope.filter = {
+        NFC: [],
+        AFC: []
+      };
     }
     ]);

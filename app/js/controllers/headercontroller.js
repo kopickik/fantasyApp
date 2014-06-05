@@ -15,6 +15,14 @@ angular.module('fantasyApp.controllers.header', ['fantasyApp.services.login'])
 
       $scope.navbarEntries = [
       {
+        "title": "signin",
+        "link": "/signin"
+      },
+      {
+        "title": "signup",
+        "link": "/signup"
+      },
+      {
         "title": "NFL Teams",
         "link": "/nflteams"
       },

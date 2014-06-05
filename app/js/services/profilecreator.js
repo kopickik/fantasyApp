@@ -1,3 +1,4 @@
+/* global angular,window*/
 'use strict';
 
 angular.module('fantasyApp.services.profileCreator', [])
@@ -9,5 +10,5 @@ angular.module('fantasyApp.services.profileCreator', [])
           $rootScope.$apply();
         }
       });
-    }
+    };
   }]);
